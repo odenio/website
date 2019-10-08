@@ -90,8 +90,8 @@ your workflow needs to create the namespace as a prior step.
 
 If you're relying on a separate tool to create your namespaces, make sure that:
 
-1) The label `linkerd.io/is-control-plane: "true"` is added to the namespace
-1) The `Namespace` value is passed when invoking `helm install`
+1. The label `linkerd.io/is-control-plane: "true"` is added to the namespace
+1. The `Namespace` value is passed when invoking `helm install`
 
 ## Helm upgrade procedure
 
@@ -108,5 +108,5 @@ linkerd/linkerd2        <chart-semver-version> {{% latestversion %}}    Linkerd 
 Use the `helm upgrade` command to upgrade the chart:
 
 ```bash
-helm upgrade linkerd2 linkerd/linkerd2
+helm upgrade linkerd2 linkerd/linkerd2 --reuse-values
 ```
